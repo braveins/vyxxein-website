@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: braveins/vyxxein-website # Replace with your GitHub username and repo name
   branch: main # The branch to commit to
 
