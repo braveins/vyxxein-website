@@ -3,25 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
-    <meta name="robots" content="noindex" />
+    <script src="/admin/decap-cms.js"></script>
   </head>
   <body>
-    <!-- Required root container for Decap CMS -->
-    <div id="nc-root"></div>
-
-    <!-- Load Decap CMS from your site -->
-    <script src="/admin/decap-cms.js"></script>
-
-    <!-- Initialize CMS -->
     <script>
-      window.addEventListener("DOMContentLoaded", function() {
-        if (typeof CMS !== "undefined") {
-          CMS.init();
-          console.log("Decap CMS initialized successfully ✅");
-        } else {
-          console.error("❌ Decap CMS failed to load. Check /admin/decap-cms.js");
-        }
-      });
+      CMS.init();
     </script>
   </body>
 </html>
