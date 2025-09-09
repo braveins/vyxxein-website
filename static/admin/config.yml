@@ -4,7 +4,6 @@ backend:
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
-
 site_url: "https://vyxxein.netlify.app"
 
 collections:
