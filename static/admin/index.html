@@ -6,14 +6,22 @@
     <meta name="robots" content="noindex" />
   </head>
   <body>
+    <!-- Required root container for Decap CMS -->
     <div id="nc-root"></div>
-    <script src="https://unpkg.com/decap-cms@3.0.13/dist/decap-cms.js"></script>
+
+    <!-- Load Decap CMS from your site -->
+    <script src="/admin/decap-cms.js"></script>
+
+    <!-- Initialize CMS -->
     <script>
-      if (typeof CMS !== "undefined") {
-        CMS.init();
-      } else {
-        console.error("Decap CMS script failed to load!");
-      }
+      window.addEventListener("DOMContentLoaded", function() {
+        if (typeof CMS !== "undefined") {
+          CMS.init();
+          console.log("Decap CMS initialized successfully ✅");
+        } else {
+          console.error("❌ Decap CMS failed to load. Check /admin/decap-cms.js");
+        }
+      });
     </script>
   </body>
 </html>
