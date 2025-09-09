@@ -1,18 +1,20 @@
 backend:
   name: github
-  repo: braveins/vyxxein-website # Replace with your GitHub username and repo name
-  branch: main # The branch to commit to
+  repo: braveins/vyxxein-website
+  branch: main
 
-media_folder: "static/uploads" # Folder where images will be stored
-public_folder: "/uploads" # Public path to images
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "posts"
-    label: "Posts"
+  - name: "blog"
+    label: "Blog Posts"
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Categories", name: "categories", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "list" }

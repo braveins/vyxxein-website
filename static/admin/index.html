@@ -4,6 +4,37 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
+    
+    <!-- Add this configuration script -->
+    <script>
+        CMS.init({
+            config: {
+                backend: {
+                    name: "github",
+                    repo: "braveins/vyxxein-website",
+                    branch: "main"
+                },
+                media_folder: "static/images/uploads",
+                public_folder: "/images/uploads",
+                collections: [
+                    {
+                        name: "blog",
+                        label: "Blog Posts",
+                        folder: "content/posts",
+                        create: true,
+                        slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
+                        fields: [
+                            { label: "Title", name: "title", widget: "string" },
+                            { label: "Publish Date", name: "date", widget: "datetime" },
+                            { label: "Body", name: "body", widget: "markdown" },
+                            { label: "Categories", name: "categories", widget: "list" },
+                            { label: "Tags", name: "tags", widget: "list" }
+                        ]
+                    }
+                ]
+            }
+        });
+    </script>
 </head>
 <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
