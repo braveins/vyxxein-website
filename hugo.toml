@@ -1,5 +1,4 @@
 baseURL = 'https://vyxxein.netlify.app'
 languageCode = 'en-us'
 title = 'Welcome to vyxxein site'
-
-theme = 'ananke'
+theme = 'congo'
